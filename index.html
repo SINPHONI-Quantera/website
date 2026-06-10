@@ -323,7 +323,7 @@
       font-size: 0.95rem;
     }
 
-    footer {
+ footer {
   background: var(--primary);
   color: var(--white);
   padding: 3rem 1.5rem 1.5rem;
@@ -334,59 +334,51 @@
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 0.8fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
 }
 
-.footer-column h3 {
+.footer-project-title {
+  max-width: 520px;
+  margin: 0;
+  color: #e0e7ff;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.footer-social h3 {
   color: #ffffff;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-size: 1.05rem;
 }
 
-.footer-column p {
-  margin: 0;
-  color: #e0e7ff;
-}
-
-.footer-column a {
-  display: block;
-  color: #e0e7ff;
-  text-decoration: none;
-  margin-bottom: 0.45rem;
-}
-
-.footer-column a:hover {
-  color: #c4b5fd;
-}
-
-.footer-logo {
-  height: 80px;
-  width: auto;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.footer-brand p {
-  max-width: 380px;
-}
-
 .social-link {
-  display: inline-block;
-  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+  text-decoration: none;
 }
 
 .social-icon {
-  height: 34px;
-  width: 34px;
+  height: 54px;
+  width: 54px;
   display: block;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
   opacity: 0.95;
 }
 
 .social-icon:hover {
   opacity: 1;
+  transform: scale(1.04);
 }
 
 .footer-bottom {
@@ -404,6 +396,15 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .footer-social {
+    text-align: left;
+  }
+
+  .footer-bottom {
+    text-align: left;
+  }
+}
 
   .footer-bottom {
     text-align: left;
@@ -666,37 +667,19 @@
   </main>
 
   <footer>
-  <div class="footer-content">
+  <div class="footer-content simple-footer">
 
     <div class="footer-column footer-brand">
-      <img src="assets/logos/sinphoni-logo-footer.png" alt="SINPHONI logo" class="footer-logo">
-
-      <p>
+      <p class="footer-project-title">
         On-chip Moiré Single-Photon Emitters for Quantum Communications
       </p>
+    </div>
 
+    <div class="footer-column footer-social">
+      <h3>Follow SINPHONI</h3>
       <a class="social-link" href="https://www.linkedin.com/in/sinphoni-quantera-228880415/" target="_blank" rel="noopener" aria-label="SINPHONI LinkedIn page">
         <img src="assets/logos/linkedin-white.png" alt="LinkedIn" class="social-icon">
       </a>
-    </div>
-
-    <div class="footer-column">
-      <h3>Contact</h3>
-      <p>
-        Project coordinator<br>
-        Assoc. Prof. Javier Martín Sánchez<br>
-        University of Oviedo<br>
-        <a href="mailto:javiermartin@uniovi.es">javiermartin@uniovi.es</a>
-      </p>
-    </div>
-
-    <div class="footer-column">
-      <h3>Links</h3>
-      <a href="#project">Project</a>
-      <a href="#consortium">Consortium</a>
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-      <a href="#resources">Resources</a>
     </div>
 
   </div>
