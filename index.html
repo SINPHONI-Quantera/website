@@ -324,21 +324,91 @@
     }
 
     footer {
-      background: var(--primary);
-      color: var(--white);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      font-size: 0.95rem;
-    }
+  background: var(--primary);
+  color: var(--white);
+  padding: 3rem 1.5rem 1.5rem;
+  font-size: 0.95rem;
+}
 
-    footer p {
-      margin: 0.3rem 0;
-      color: #e0e7ff;
-    }
+.footer-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.8fr;
+  gap: 2.5rem;
+  align-items: start;
+}
 
-    footer a {
-      color: var(--white);
-    }
+.footer-column h3 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.footer-column p {
+  margin: 0;
+  color: #e0e7ff;
+}
+
+.footer-column a {
+  display: block;
+  color: #e0e7ff;
+  text-decoration: none;
+  margin-bottom: 0.45rem;
+}
+
+.footer-column a:hover {
+  color: #c4b5fd;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  max-width: 380px;
+}
+
+.social-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  height: 34px;
+  width: 34px;
+  display: block;
+  opacity: 0.95;
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  max-width: 1180px;
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+@media (max-width: 820px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    text-align: left;
+  }
+}
 
     @media (max-width: 820px) {
       nav {
@@ -596,9 +666,45 @@
   </main>
 
   <footer>
-    <p>© 2026 SINPHONI QuantERA Consortium Project</p>
-    <p>On-chip Moiré Single-Photon Emitters for Quantum Communications</p>
-  </footer>
+  <div class="footer-content">
+
+    <div class="footer-column footer-brand">
+      <img src="assets/logos/sinphoni-logo-footer.png" alt="SINPHONI logo" class="footer-logo">
+
+      <p>
+        On-chip Moiré Single-Photon Emitters for Quantum Communications
+      </p>
+
+      <a class="social-link" href="https://www.linkedin.com/in/sinphoni-quantera-228880415/" target="_blank" rel="noopener" aria-label="SINPHONI LinkedIn page">
+        <img src="assets/logos/linkedin-white.png" alt="LinkedIn" class="social-icon">
+      </a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>
+        Project coordinator<br>
+        Assoc. Prof. Javier Martín Sánchez<br>
+        University of Oviedo<br>
+        <a href="mailto:javiermartin@uniovi.es">javiermartin@uniovi.es</a>
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Links</h3>
+      <a href="#project">Project</a>
+      <a href="#consortium">Consortium</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#resources">Resources</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 SINPHONI QuantERA Consortium Project
+  </div>
+</footer>
 
 </body>
 </html>
